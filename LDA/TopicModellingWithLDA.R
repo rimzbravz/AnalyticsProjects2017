@@ -20,3 +20,11 @@ docs <- Corpus(VectorSource(files))
 #inspect a particular document in corpus
 writeLines(as.character(docs[[1]]))
 ?writeLines
+
+
+#Preprocessing
+#always transform to lower case
+docs <- tm_map(docs,content_transformer(tolower))
+
+
+
